@@ -54,6 +54,7 @@ diagrams (XY-mode) can also be obtained.
 %doc %{_texmfdistdir}/doc/generic/pst-osci/oscilloscope.tex
 %doc %{_texmfdistdir}/doc/generic/pst-osci/pst-osci-doc.pdf
 %doc %{_texmfdistdir}/doc/generic/pst-osci/pst-osci-doc.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -64,3 +65,5 @@ diagrams (XY-mode) can also be obtained.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
