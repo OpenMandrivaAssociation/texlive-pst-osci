@@ -55,3 +55,17 @@ diagrams (XY-mode) can also be obtained.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.82-2
++ Revision: 755392
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.82-1
++ Revision: 719376
+- texlive-pst-osci
+- texlive-pst-osci
+- texlive-pst-osci
+- texlive-pst-osci
+
