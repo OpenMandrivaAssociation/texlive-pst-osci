@@ -6,7 +6,7 @@
 # catalog-version 2.82
 Name:		texlive-pst-osci
 Version:	2.82
-Release:	9
+Release:	10
 Summary:	Oscgons with PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-osci
