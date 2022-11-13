@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /graphics/pstricks/contrib/pst-osci
-# catalog-date 2008-10-08 15:45:53 +0200
-# catalog-license lppl
-# catalog-version 2.82
 Name:		texlive-pst-osci
-Version:	2.82
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Oscgons with PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-osci
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-osci.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-osci.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-osci.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-osci.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ subtract or to multiply the two other signals. Lissajous
 diagrams (XY-mode) can also be obtained.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,24 +42,10 @@ diagrams (XY-mode) can also be obtained.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.82-2
-+ Revision: 755392
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.82-1
-+ Revision: 719376
-- texlive-pst-osci
-- texlive-pst-osci
-- texlive-pst-osci
-- texlive-pst-osci
-
